@@ -1,0 +1,75 @@
+// src/app/styles/index.scss
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: linear-gradient(135deg, #a8edea, #fed6e3);
+  --text-color: #1e1e1e;
+  --button-bg: #1e90ff;
+  --button-text: #ffffff;
+  --input-bg: #ffffff;
+  --input-border: #ccc;
+  --card-bg: #ffffff;
+  --header-bg: transparent;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  --bg-color: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+  --text-color: #f5f5f5;
+  --button-bg: #3333ff;
+  --button-text: #ffffff;
+  --input-bg: #1e1e1e;
+  --input-border: #444;
+  --card-bg: #1c1c1c;
+  --header-bg: transparent;
+  --box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+html,
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  transition: background 0.8s ease-in-out, color 0.8s ease-in-out;
+  will-change: background, color;
+}
+
+button {
+  font-family: inherit;
+  transition: background 0.4s ease, color 0.4s ease, border 0.4s ease;
+  will-change: background, color, border;
+}
+
+input {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.4s ease, color 0.4s ease, border 0.4s ease;
+  will-change: background, color, border;
+}
+
+.register-form,
+.register-card {
+  background: var(--card-bg);
+  color: var(--text-color);
+  box-shadow: var(--box-shadow);
+  transition: background 0.6s ease-in-out, color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+  will-change: background, color, box-shadow;
+}
+
+.header {
+  background: var(--header-bg);
+  color: var(--text-color);
+  transition: background 0.6s ease-in-out, color 0.6s ease-in-out;
+  will-change: background, color;
+}

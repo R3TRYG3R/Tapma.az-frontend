@@ -1,0 +1,75 @@
+// src/widgets/header/ui/Header.scss
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: transparent;
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+
+  &__right {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  &__button {
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    background: #eee;
+    transition: background 0.2s;
+    white-space: nowrap;
+    min-width: 140px;
+    display: inline-block;
+
+    &:hover {
+      background: #ddd;
+    }
+
+    &--primary {
+      background: #1e90ff;
+      color: white;
+
+      &:hover {
+        background: #1c7ee6;
+      }
+    }
+
+    &--login {
+      min-width: 110px;
+    }
+
+    &--register {
+      min-width: 160px;
+    }
+  }
+
+  &__lang-btn {
+    border: none;
+    background: transparent;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    &.animating {
+      transform: scale(0.8) rotate(20deg);
+      opacity: 0.5;
+    }
+  }
+}

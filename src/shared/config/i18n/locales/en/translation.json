@@ -1,0 +1,23 @@
+{
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "create_account": "Create an account",
+    "nickname": "Nickname",
+    "email": "Email",
+    "password": "Password",
+    "loading": "Loading...",
+    "user_exists": "User already exists",
+    "invalid_email": "Invalid email"
+  },
+
+  "home": {
+  "title": "Welcome to Tapma.az",
+  "subtitle": "Find what you've been looking for"
+  },
+
+  "register": {
+  "welcome": "Welcome to Tapma.az",
+  "subtitle": "Find what you've been looking for. Join in 10 seconds."
+  }
+}

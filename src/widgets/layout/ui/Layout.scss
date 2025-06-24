@@ -1,0 +1,19 @@
+// src/widgets/layout/ui/Layout.scss
+
+.auth-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.default-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.default-layout main {
+  flex-grow: 1;
+}
