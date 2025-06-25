@@ -8,7 +8,10 @@
     "password": "Password",
     "loading": "Loading...",
     "user_exists": "User already exists",
-    "invalid_email": "Invalid email"
+    "invalid_email": "Invalid email",
+    "user_not_found": "User not found",
+    "wrong_password": "Incorrect password",
+    "unknown_error": "Something went wrong"
   },
 
   "home": {
@@ -19,5 +22,16 @@
   "register": {
   "welcome": "Welcome to Tapma.az",
   "subtitle": "Find what you've been looking for. Join in 10 seconds."
+  },
+
+  "login": {
+  "welcome": "Welcome back!",
+  "subtitle": "Login to continue to Tapma.az",
+  "account": "Login to your account",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "loading": "Logging in...",
+  "error": "Invalid email or password"
   }
 }
