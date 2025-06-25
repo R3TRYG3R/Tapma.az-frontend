@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { useRegister } from '@/features/auth/lib/useRegister'
 import { useTranslation } from 'react-i18next'
-import { useNavigate } from 'react-router-dom'
 import './RegisterForm.scss'
 
 export const RegisterForm = () => {
@@ -12,7 +11,6 @@ export const RegisterForm = () => {
   const [nickname, setNickname] = useState('')
   const { register, loading, error } = useRegister()
   const { t } = useTranslation()
-  const navigate = useNavigate()
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -21,7 +19,6 @@ export const RegisterForm = () => {
 
   return (
     <form className="register-form" onSubmit={handleSubmit}>
-
       <h2>{t('auth.create_account')}</h2>
 
       <input
@@ -52,7 +49,9 @@ export const RegisterForm = () => {
         {loading ? t('auth.loading') : t('auth.register')}
       </button>
 
-      {error && <p className="error">{t(`auth.${error}`) || error}</p>}
+      {error && (
+        <p className="error">{t(`auth.${error}`) || t('auth.unknown_error')}</p>
+      )}
     </form>
   )
 }

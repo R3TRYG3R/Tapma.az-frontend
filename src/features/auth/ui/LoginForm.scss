@@ -55,13 +55,14 @@
   }
 
   .error {
-    color: #ff4d4f;
-    background: rgba(255, 77, 79, 0.1);
-    padding: 0.75rem 1rem;
-    border-radius: 8px;
-    font-size: 0.95rem;
     margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: #ff4d4f;
+    color: white;
+    border-radius: 8px;
     text-align: center;
+    font-size: 0.9rem;
+    word-break: break-word;
     animation: fadeIn 0.3s ease;
   }
 

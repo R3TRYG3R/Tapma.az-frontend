@@ -22,7 +22,11 @@ export const useLogin = () => {
       if (!response.ok) {
         const err = await response.json()
         const message = err.message || 'unknown_error'
-        throw new Error(message.replace(/\s+/g, '_').toLowerCase())
+        throw new Error(message
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '_')
+          .replace(/^_+|_+$/g, '')
+        )
       }
 
       const data = await response.json()

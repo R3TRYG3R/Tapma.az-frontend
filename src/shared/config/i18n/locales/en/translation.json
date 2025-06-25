@@ -11,7 +11,9 @@
     "invalid_email": "Invalid email",
     "user_not_found": "User not found",
     "wrong_password": "Incorrect password",
-    "unknown_error": "Something went wrong"
+    "unknown_error": "Something went wrong",
+    "too_many_registration_attempts_please_wait_a_few_seconds": "Too many login attempts. Please wait a few seconds.[Please don't break my backend :)]",
+    "email_already_in_use": "This email is already registered"
   },
 
   "home": {

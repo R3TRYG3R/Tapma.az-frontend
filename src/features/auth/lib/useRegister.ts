@@ -21,10 +21,14 @@ export const useRegister = () => {
 
       if (!response.ok) {
         const err = await response.json()
-        throw new Error(err.message || 'Registration failed')
+        const message = err.message || 'unknown_error'
+        throw new Error(message
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '_')
+          .replace(/^_+|_+$/g, '')
+        )
       }
 
-      // редиректим на логин
       navigate('/auth/login')
     } catch (err) {
       setError((err as Error).message)

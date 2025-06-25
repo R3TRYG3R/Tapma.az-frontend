@@ -11,7 +11,9 @@
     "invalid_email": "Неверная почта",
     "user_not_found": "Пользователь не найден",
     "wrong_password": "Неверный пароль",
-    "unknown_error": "Что-то пошло не так"
+    "unknown_error": "Что-то пошло не так",
+    "too_many_registration_attempts_please_wait_a_few_seconds": "Слишком много попыток входа. Пожалуйста, подождите немного.[НЕ ломай мой бэкенд пожалуйста :)]",
+    "email_already_in_use": "Эта почта уже зарегистрирована"
   },
 
   "home": {
