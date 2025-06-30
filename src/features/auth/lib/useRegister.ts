@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { uploadRandomAvatar } from '@/features/profile/lib/uploadRandomAvatar' // создадим его
 
 export const useRegister = () => {
   const [loading, setLoading] = useState(false)
@@ -27,6 +28,15 @@ export const useRegister = () => {
           .replace(/[^a-z0-9]+/g, '_')
           .replace(/^_+|_+$/g, '')
         )
+      }
+
+      const data = await response.json()
+      const token = data.token
+      const userId = data.user?.id
+
+      if (token && userId) {
+        localStorage.setItem('token', token)
+        await uploadRandomAvatar(userId, token)
       }
 
       navigate('/auth/login')

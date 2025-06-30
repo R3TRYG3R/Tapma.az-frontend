@@ -13,27 +13,35 @@
     "wrong_password": "Incorrect password",
     "unknown_error": "Something went wrong",
     "too_many_registration_attempts_please_wait_a_few_seconds": "Too many login attempts. Please wait a few seconds.[Please don't break my backend :)]",
-    "email_already_in_use": "This email is already registered"
+    "email_already_in_use": "This email is already registered",
+    "invalid_password": "Invalid password"
   },
 
   "home": {
-  "title": "Welcome to Tapma.az",
-  "subtitle": "Find what you've been looking for"
+    "title": "Welcome to Tapma.az",
+    "subtitle": "Find what you've been looking for"
   },
 
   "register": {
-  "welcome": "Welcome to Tapma.az",
-  "subtitle": "Find what you've been looking for. Join in 10 seconds."
+    "welcome": "Welcome to Tapma.az",
+    "subtitle": "Find what you've been looking for. Join in 10 seconds."
   },
 
   "login": {
-  "welcome": "Welcome back!",
-  "subtitle": "Login to continue to Tapma.az",
-  "account": "Login to your account",
-  "email": "Email",
-  "password": "Password",
-  "login": "Login",
-  "loading": "Logging in...",
-  "error": "Invalid email or password"
+    "welcome": "Welcome back!",
+    "subtitle": "Login to continue to Tapma.az",
+    "account": "Login to your account",
+    "email": "Email",
+    "password": "Password",
+    "login": "Login",
+    "loading": "Logging in...",
+    "error": "Invalid email or password"
+  },
+
+  "profile": {
+    "title": "Your Profile",
+    "subtitle": "Manage your account settings",
+    "upload_avatar": "Upload new profile picture",
+    "remove_avatar": "Remove profile picture"
   }
 }

@@ -22,15 +22,21 @@ export const useLogin = () => {
       if (!response.ok) {
         const err = await response.json()
         const message = err.message || 'unknown_error'
-        throw new Error(message
-          .toLowerCase()
-          .replace(/[^a-z0-9]+/g, '_')
-          .replace(/^_+|_+$/g, '')
+        throw new Error(
+          message
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '_')
+            .replace(/^_+|_+$/g, '')
         )
       }
 
       const data = await response.json()
-      localStorage.setItem('token', data.access_token)
+
+      if (!data?.token || data.token === 'undefined') {
+        throw new Error('user_not_found')
+      }
+
+      localStorage.setItem('token', data.token)
       navigate('/')
     } catch (err) {
       setError((err as Error).message)

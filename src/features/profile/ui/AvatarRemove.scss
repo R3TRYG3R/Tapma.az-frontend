@@ -1,0 +1,43 @@
+// src/features/profile/ui/AvatarRemove.scss
+
+.avatar-remove {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+
+  button {
+    width: 260px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0;
+    font-size: 0.9rem;
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #e04545;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  .remove-loading,
+  .remove-error {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .remove-error {
+    color: #ff4d4f;
+  }
+}

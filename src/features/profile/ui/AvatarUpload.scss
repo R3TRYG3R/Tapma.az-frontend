@@ -1,0 +1,52 @@
+// src/features/profile/ui/AvatarUpload.scss
+
+.avatar-upload {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .upload-status {
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
+    text-align: center;
+    max-width: 260px;
+    line-height: 1.3;
+    font-weight: bold;
+
+    &.loading {
+      color: var(--text-color);
+      opacity: 0.85;
+    }
+
+    &.error {
+      background-color: #ff4d4f;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+    }
+  }
+
+  .upload-label {
+    width: 260px;
+    height: 40px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
+
+    &:hover {
+      background: #187bdb;
+    }
+
+    input {
+      display: none;
+    }
+  }
+}
