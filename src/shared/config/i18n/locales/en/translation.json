@@ -43,7 +43,9 @@
     "title": "Your Profile",
     "subtitle": "Manage your account settings",
     "upload_avatar": "Upload new profile picture",
-    "remove_avatar": "Remove profile picture"
+    "remove_avatar": "Remove profile picture",
+    "error_file_too_large": "File is too large. Max size is 5MB.",
+    "error_invalid_type": "Only JPG, PNG, and GIF files are allowed."
   },
 
   "header": {

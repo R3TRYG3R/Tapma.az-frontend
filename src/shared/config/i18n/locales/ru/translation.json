@@ -43,7 +43,9 @@
     "title": "Ваш профиль",
     "subtitle": "Управление настройками аккаунта",
     "upload_avatar": "Загрузить новое фото профиля",
-    "remove_avatar": "Удалить фото профиля"
+    "remove_avatar": "Удалить фото профиля",
+    "error_file_too_large": "Файл слишком большой. Максимум — 5MB.",
+    "error_invalid_type": "Можно загружать только JPG, PNG или GIF."
   },
 
   "header": {
