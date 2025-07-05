@@ -38,6 +38,7 @@ export const useLogin = () => {
 
       localStorage.setItem('token', data.token)
       navigate('/')
+      window.location.reload()
     } catch (err) {
       setError((err as Error).message)
     } finally {

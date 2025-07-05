@@ -11,8 +11,15 @@
 :root {
   --bg-color: linear-gradient(135deg, #a8edea, #fed6e3);
   --text-color: #1e1e1e;
+
   --button-bg: #1e90ff;
+  --button-bg-hover: #187bdb;
   --button-text: #ffffff;
+
+  --button-danger-bg: #ff4d4f;
+  --button-danger-bg-hover: #e04545;
+  --button-danger-text: #ffffff;
+
   --input-bg: #ffffff;
   --input-border: #ccc;
   --card-bg: #ffffff;
@@ -23,8 +30,15 @@
 [data-theme='dark'] {
   --bg-color: linear-gradient(135deg, #2b2b2b, #1a1a1a);
   --text-color: #f5f5f5;
+
   --button-bg: #3333ff;
+  --button-bg-hover: #2b2bcf;
   --button-text: #ffffff;
+
+  --button-danger-bg: #ff4d4f;
+  --button-danger-bg-hover: #e04545;
+  --button-danger-text: #ffffff;
+
   --input-bg: #1e1e1e;
   --input-border: #444;
   --card-bg: #1c1c1c;
@@ -72,4 +86,72 @@ input {
   color: var(--text-color);
   transition: background 0.6s ease-in-out, color 0.6s ease-in-out;
   will-change: background, color;
+}
+
+/* ==== Global Button Styles ==== */
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  line-height: 1;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+  text-decoration: none;
+  user-select: none;
+  border: 2px solid transparent;
+}
+
+/* PRIMARY — purple */
+.button--primary {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border-color: transparent;
+
+  &:hover {
+    background-color: var(--button-bg-hover);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+/* DANGER — red */
+.button--danger {
+  background-color: var(--button-danger-bg);
+  color: var(--button-danger-text);
+  border-color: transparent;
+
+  &:hover {
+    background-color: var(--button-danger-bg-hover);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+/* SECONDARY — outline */
+.button--secondary {
+  background-color: transparent;
+  color: var(--button-bg);
+  border-color: var(--button-bg);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 }

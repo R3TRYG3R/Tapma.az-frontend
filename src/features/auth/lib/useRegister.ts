@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { uploadRandomAvatar } from '@/features/profile/lib/uploadRandomAvatar' // создадим его
+import { uploadRandomAvatar } from '@/features/profile/lib/uploadRandomAvatar'
 
 export const useRegister = () => {
   const [loading, setLoading] = useState(false)
@@ -23,10 +23,11 @@ export const useRegister = () => {
       if (!response.ok) {
         const err = await response.json()
         const message = err.message || 'unknown_error'
-        throw new Error(message
-          .toLowerCase()
-          .replace(/[^a-z0-9]+/g, '_')
-          .replace(/^_+|_+$/g, '')
+        throw new Error(
+          message
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '_')
+            .replace(/^_+|_+$/g, '')
         )
       }
 
@@ -37,9 +38,10 @@ export const useRegister = () => {
       if (token && userId) {
         localStorage.setItem('token', token)
         await uploadRandomAvatar(userId, token)
-      }
 
-      navigate('/auth/login')
+        navigate('/')
+        window.location.reload()
+      }
     } catch (err) {
       setError((err as Error).message)
     } finally {

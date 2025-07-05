@@ -45,7 +45,11 @@ export const RegisterForm = () => {
         required
       />
 
-      <button type="submit" disabled={loading}>
+      <button
+        type="submit"
+        disabled={loading}
+        className="button button--primary"
+      >
         {loading ? t('auth.loading') : t('auth.register')}
       </button>
 

@@ -14,7 +14,8 @@
     "unknown_error": "Something went wrong",
     "too_many_registration_attempts_please_wait_a_few_seconds": "Too many login attempts. Please wait a few seconds.[Please don't break my backend :)]",
     "email_already_in_use": "This email is already registered",
-    "invalid_password": "Invalid password"
+    "invalid_password": "Invalid password",
+    "logout": "Logout"
   },
 
   "home": {
@@ -43,5 +44,9 @@
     "subtitle": "Manage your account settings",
     "upload_avatar": "Upload new profile picture",
     "remove_avatar": "Remove profile picture"
+  },
+
+  "header": {
+    "create_ad": "Create Ad"
   }
 }

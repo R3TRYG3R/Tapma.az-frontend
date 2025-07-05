@@ -22,10 +22,19 @@ export const AvatarRemove = ({ userId, onRemoveSuccess }: Props) => {
 
   return (
     <div className="avatar-remove">
-      <button onClick={handleRemove} disabled={loading}>
+      <button
+        onClick={handleRemove}
+        disabled={loading}
+        className="button button--danger"
+        style={{ width: '260px', height: '40px' }}
+      >
         {loading ? t('auth.loading') : t('profile.remove_avatar')}
       </button>
-      {error && <p className="remove-error">{t(`auth.${error}`) || t('auth.unknown_error')}</p>}
+      {error && (
+        <p className="remove-error">
+          {t(`auth.${error}`) || t('auth.unknown_error')}
+        </p>
+      )}
     </div>
   )
 }

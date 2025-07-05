@@ -36,9 +36,15 @@ export const AvatarUpload = ({ userId, onUploadSuccess }: Props) => {
         </p>
       )}
 
-      <label className="upload-label">
+      <label className="button button--primary" style={{ width: '260px', height: '40px' }}>
         {t('profile.upload_avatar')}
-        <input type="file" accept="image/*" onChange={handleFileChange} disabled={loading} />
+        <input
+          type="file"
+          accept="image/*"
+          onChange={handleFileChange}
+          disabled={loading}
+          hidden
+        />
       </label>
     </div>
   )

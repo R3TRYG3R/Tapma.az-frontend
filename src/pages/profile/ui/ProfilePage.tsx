@@ -5,12 +5,22 @@ import { useTranslation } from 'react-i18next'
 import { useCurrentUser } from '@/features/auth/lib/useCurrentUser'
 import { AvatarUpload } from '@/features/profile/ui/AvatarUpload'
 import { AvatarRemove } from '@/features/profile/ui/AvatarRemove'
+import { useNavigate } from 'react-router-dom'
 
 const ProfilePage = () => {
   const { t } = useTranslation()
   const { user, loading, error } = useCurrentUser()
+  const navigate = useNavigate()
 
-  const isCustomAvatar = user?.avatarUrl && !user.avatarUrl.includes('ui-avatars.com')
+  const isUiAvatar = user?.avatarUrl?.includes('ui-avatars.com')
+  const isDefaultAvatar = !user?.avatarUrl || isUiAvatar
+  const showRemoveButton = !isDefaultAvatar
+
+  const handleLogout = () => {
+    localStorage.removeItem('token')
+    navigate('/')
+    window.location.reload()
+  }
 
   return (
     <div className="profile-page">
@@ -30,14 +40,20 @@ const ProfilePage = () => {
             />
 
             <div className="profile-info">
-              <p><span>{t('auth.nickname')}:</span> {user.nickname}</p>
+              <p>
+                <span>{t('auth.nickname')}:</span> {user.nickname}
+              </p>
             </div>
 
             <AvatarUpload userId={user.id} onUploadSuccess={() => window.location.reload()} />
-            
-            {isCustomAvatar && (
+
+            {showRemoveButton && (
               <AvatarRemove userId={user.id} onRemoveSuccess={() => window.location.reload()} />
             )}
+
+            <button className="button button--secondary" onClick={handleLogout}>
+              {t('auth.logout')}
+            </button>
           </div>
         )}
       </div>
