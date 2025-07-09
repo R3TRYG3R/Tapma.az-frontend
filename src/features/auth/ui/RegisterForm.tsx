@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useRegister } from '@/features/auth/lib/useRegister'
 import { useTranslation } from 'react-i18next'
 import './RegisterForm.scss'
+import { toast } from 'react-toastify'
 
 export const RegisterForm = () => {
   const [email, setEmail] = useState('')
@@ -14,7 +15,10 @@ export const RegisterForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    register(email, password, nickname)
+    register(email, password, nickname).catch(err => {
+      const key = err.message.toLowerCase().replace(/[^a-z0-9]+/g, '_')
+      toast.error(t(`auth.${key}`) || t('auth.unknown_error'))
+    })
   }
 
   return (
@@ -52,10 +56,6 @@ export const RegisterForm = () => {
       >
         {loading ? t('auth.loading') : t('auth.register')}
       </button>
-
-      {error && (
-        <p className="error">{t(`auth.${error}`) || t('auth.unknown_error')}</p>
-      )}
     </form>
   )
 }

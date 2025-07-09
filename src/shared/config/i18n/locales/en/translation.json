@@ -50,5 +50,22 @@
 
   "header": {
     "create_ad": "Create Ad"
+  },
+
+  "create": {
+    "title": "Create a New Ad",
+    "subtitle": "Fill in the details below",
+    "placeholder_title": "Title",
+    "placeholder_description": "Description",
+    "choose_file": "Choose file",
+    "submit": "Create",
+    "success": "Ad successfully created!",
+    "error_title_required": "Title is required.",
+    "error_description_required": "Description is required.",
+    "error_title_limit": "Title must be at most 22 characters.",
+    "error_description_limit": "Description must be at most 50 characters.",
+    "error_file_too_large": "File is too large. Max size is 5MB.",
+    "error_invalid_type": "Only JPG, PNG, and WEBP files are allowed.",
+    "maximum_5_ads_per_user": "You can create up to 5 ads only"
   }
 }

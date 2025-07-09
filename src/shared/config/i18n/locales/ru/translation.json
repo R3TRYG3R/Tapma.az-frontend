@@ -49,6 +49,23 @@
   },
 
   "header": {
-  "create_ad": "Создать объявление"
+    "create_ad": "Создать объявление"
+  },
+
+  "create": {
+    "title": "Создать новое объявление",
+    "subtitle": "Заполните поля ниже",
+    "placeholder_title": "Заголовок",
+    "placeholder_description": "Описание",
+    "choose_file": "Выбрать файл",
+    "submit": "Создать",
+    "success": "Объявление успешно создано!",
+    "error_title_required": "Введите заголовок.",
+    "error_description_required": "Введите описание.",
+    "error_title_limit": "Название должно быть не длиннее 22 символов.",
+    "error_description_limit": "Описание должно быть не длиннее 50 символов.",
+    "error_file_too_large": "Файл слишком большой. Максимум — 5MB.",
+    "error_invalid_type": "Можно загружать только JPG, PNG или WEBP.",
+    "maximum_5_ads_per_user": "Можно создать не более 5 объявлений"
   }
 }

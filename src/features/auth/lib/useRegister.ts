@@ -38,12 +38,13 @@ export const useRegister = () => {
       if (token && userId) {
         localStorage.setItem('token', token)
         await uploadRandomAvatar(userId, token)
-
         navigate('/')
         window.location.reload()
       }
     } catch (err) {
-      setError((err as Error).message)
+      const message = (err as Error).message
+      setError(message)
+      throw new Error(message)
     } finally {
       setLoading(false)
     }

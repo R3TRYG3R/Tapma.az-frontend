@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useLogin } from '@/features/auth/lib/useLogin'
 import { useTranslation } from 'react-i18next'
 import './LoginForm.scss'
+import { toast } from 'react-toastify'
 
 export const LoginForm = () => {
   const [email, setEmail] = useState('')
@@ -13,7 +14,10 @@ export const LoginForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    login(email, password)
+    login(email, password).catch(err => {
+      const key = err.message.toLowerCase().replace(/[^a-z0-9]+/g, '_')
+      toast.error(t(`auth.${key}`) || t('auth.unknown_error'))
+    })
   }
 
   return (
@@ -43,10 +47,6 @@ export const LoginForm = () => {
       >
         {loading ? t('auth.loading') : t('auth.login')}
       </button>
-
-      {error && (
-        <p className="error">{t(`auth.${error}`) || t('auth.unknown_error')}</p>
-      )}
     </form>
   )
 }

@@ -1,8 +1,7 @@
 // src/features/profile/ui/AvatarRemove.scss
 
-.remove-error {
-  margin-top: 1rem;
-  font-size: 0.85rem;
-  text-align: center;
-  color: #ff4d4f;
+.avatar-remove {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
