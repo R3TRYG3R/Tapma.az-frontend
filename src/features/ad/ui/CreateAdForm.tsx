@@ -35,7 +35,7 @@ export const CreateAdForm = () => {
       return
     }
 
-    if (trimmedDescription.length > 50) {
+    if (trimmedDescription.length > 35) {
       toast.error(t('create.error_description_limit'))
       return
     }
@@ -101,7 +101,7 @@ export const CreateAdForm = () => {
         placeholder={t('create.placeholder_description')}
         value={description}
         onChange={(e) => setDescription(e.target.value)}
-        maxLength={50}
+        maxLength={35}
         required
       />
 

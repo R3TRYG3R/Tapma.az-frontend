@@ -12,7 +12,7 @@
     "user_not_found": "Пользователь не найден",
     "wrong_password": "Неверный пароль",
     "unknown_error": "Что-то пошло не так",
-    "too_many_registration_attempts_please_wait_a_few_seconds": "Слишком много попыток входа. Пожалуйста, подождите немного.[НЕ ломай мой бэкенд пожалуйста :)]",
+    "too_many_attempts_please_wait_a_few_seconds": "Слишком много попыток. Пожалуйста, подождите немного.[НЕ ломай мой бэкенд пожалуйста :)]",
     "email_already_in_use": "Эта почта уже зарегистрирована",
     "invalid_password": "Неверный пароль",
     "logout": "Выйти из аккаунта"
@@ -45,7 +45,8 @@
     "upload_avatar": "Загрузить новое фото профиля",
     "remove_avatar": "Удалить фото профиля",
     "error_file_too_large": "Файл слишком большой. Максимум — 5MB.",
-    "error_invalid_type": "Можно загружать только JPG, PNG или GIF."
+    "error_invalid_type": "Можно загружать только JPG, PNG или GIF.",
+    "my_ads": "Ваши объявления"
   },
 
   "header": {
@@ -66,6 +67,8 @@
     "error_description_limit": "Описание должно быть не длиннее 50 символов.",
     "error_file_too_large": "Файл слишком большой. Максимум — 5MB.",
     "error_invalid_type": "Можно загружать только JPG, PNG или WEBP.",
-    "maximum_5_ads_per_user": "Можно создать не более 5 объявлений"
+    "maximum_5_ads_per_user": "Можно создать не более 5 объявлений",
+    "confirm_delete": "Вы уверены, что хотите удалить это объявление?",
+    "deleted_success": "Объявление успешно удалено"
   }
 }

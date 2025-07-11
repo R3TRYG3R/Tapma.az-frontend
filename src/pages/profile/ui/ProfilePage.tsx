@@ -6,6 +6,7 @@ import { useCurrentUser } from '@/features/auth/lib/useCurrentUser'
 import { AvatarUpload } from '@/features/profile/ui/AvatarUpload'
 import { AvatarRemove } from '@/features/profile/ui/AvatarRemove'
 import { useNavigate } from 'react-router-dom'
+import { MyAdsList } from '@/features/ad/ui/MyAdsList' 
 
 const ProfilePage = () => {
   const { t } = useTranslation()
@@ -46,7 +47,6 @@ const ProfilePage = () => {
             </div>
 
             <AvatarUpload userId={user.id} onUploadSuccess={() => window.location.reload()} />
-
             {showRemoveButton && (
               <AvatarRemove userId={user.id} onRemoveSuccess={() => window.location.reload()} />
             )}
@@ -57,6 +57,8 @@ const ProfilePage = () => {
           </div>
         )}
       </div>
+
+      <MyAdsList />
     </div>
   )
 }

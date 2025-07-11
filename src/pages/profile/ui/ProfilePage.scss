@@ -3,35 +3,43 @@
 .profile-page {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 70vh;
+  align-items: stretch;
+  gap: 3rem;
   padding: 2rem;
+  flex-wrap: wrap;
+  min-height: 70vh;
   background: var(--bg-color);
   color: var(--text-color);
   transition: background 0.5s ease, color 0.5s ease;
 }
 
-.profile-card {
+.profile-card,
+.my-ads-list {
+  flex: 1;
+  max-width: 480px;
   background: var(--card-bg);
   padding: 2.5rem 2rem;
   border-radius: 16px;
   box-shadow: var(--box-shadow);
-  max-width: 500px;
-  width: 100%;
-  text-align: center;
   transition: box-shadow 0.4s ease, background 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.profile-card h1 {
+.profile-card h1,
+.my-ads-list h2 {
   font-size: 1.75rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .profile-subtitle {
   font-size: 0.95rem;
   color: var(--text-secondary, #888);
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .profile-details {
@@ -88,17 +96,9 @@
   }
 }
 
-@media (max-width: 480px) {
-  .profile-card {
-    padding: 2rem 1rem;
-  }
-
-  .profile-avatar {
-    width: 100px;
-    height: 100px;
-  }
-
-  .profile-card h1 {
-    font-size: 1.4rem;
+@media (max-width: 900px) {
+  .profile-card,
+  .my-ads-list {
+    max-width: 100%;
   }
 }
