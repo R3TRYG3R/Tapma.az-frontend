@@ -69,6 +69,13 @@
     "error_invalid_type": "Only JPG, PNG, and WEBP files are allowed.",
     "maximum_5_ads_per_user": "You can create up to 5 ads only",
     "confirm_delete": "Are you sure you want to delete this ad?",
-    "deleted_success": "Ad deleted successfully"
+    "deleted_success": "Ad deleted successfully",
+    "you_can_only_update_delete_your_own_ads": "You can only update/delete your own ads"
+  },
+
+  "edit": {
+    "title": "Edit Ad",
+    "save": "Save Changes",
+    "success": "Ad updated successfully!"
   }
 }

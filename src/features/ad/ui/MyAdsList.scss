@@ -69,22 +69,39 @@
       }
     }
 
-    .ad-delete-icon {
+    .ad-edit-icon {
       position: absolute;
+      top: 10px;
       right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
       background: transparent;
       border: none;
       font-size: 1.2rem;
       cursor: pointer;
       opacity: 0.6;
-      transition: opacity 0.3s ease, transform 0.2s ease;
       color: var(--text-color);
+      transition: opacity 0.3s ease, transform 0.2s ease;
 
       &:hover {
         opacity: 1;
-        transform: translateY(-50%) scale(1.1);
+        transform: scale(1.1);
+      }
+    }
+
+    .ad-delete-icon {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0.6;
+      color: var(--text-color);
+      transition: opacity 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1.1);
       }
 
       &:disabled {

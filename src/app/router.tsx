@@ -8,6 +8,8 @@ import RegisterPage from '@/pages/auth/register/RegisterPage'
 import LoginPage from '@/pages/auth/login/LoginPage'
 import ProfilePage from '@/pages/profile/ui/ProfilePage'
 import CreateAdPage from '@/pages/ad/create/ui/CreateAdPage'
+import EditAdPage from '@/pages/ad/edit/ui/EditAdPage'
+
 import { RequireAuth } from '@/shared/lib/RequireAuth'
 
 export const router = createBrowserRouter([
@@ -51,6 +53,16 @@ export const router = createBrowserRouter([
       <Layout>
         <RequireAuth>
           <CreateAdPage />
+        </RequireAuth>
+      </Layout>
+    ),
+  },
+  {
+    path: '/edit-ad/:id',
+    element: (
+      <Layout>
+        <RequireAuth>
+          <EditAdPage />
         </RequireAuth>
       </Layout>
     ),
