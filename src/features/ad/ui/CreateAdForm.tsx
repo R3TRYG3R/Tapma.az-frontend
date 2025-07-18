@@ -5,10 +5,12 @@ import { useTranslation } from 'react-i18next'
 import { useCreateAd } from '../lib/useCreateAd'
 import './CreateAdForm.scss'
 import { toast } from 'react-toastify'
+import { useNavigate } from 'react-router-dom'
 
 export const CreateAdForm = () => {
   const { t } = useTranslation()
   const { createAd, loading } = useCreateAd()
+  const navigate = useNavigate()
 
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
@@ -30,7 +32,7 @@ export const CreateAdForm = () => {
       return
     }
 
-    if (trimmedTitle.length > 22) {
+    if (trimmedTitle.length > 18) {
       toast.error(t('create.error_title_limit'))
       return
     }
@@ -48,6 +50,7 @@ export const CreateAdForm = () => {
       setFile(null)
       setPreviewUrl(null)
       toast.success(t('create.success'))
+      navigate('/')
     } else if (result.error) {
       const key = result.error.toLowerCase().replace(/[^a-z0-9]+/g, '_')
       const translated = t(`create.${key}`)
@@ -93,7 +96,7 @@ export const CreateAdForm = () => {
         placeholder={t('create.placeholder_title')}
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        maxLength={22}
+        maxLength={18}
         required
       />
 

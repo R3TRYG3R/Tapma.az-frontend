@@ -50,7 +50,7 @@ export const EditAdForm = ({
       return
     }
 
-    if (trimmedTitle.length > 22) {
+    if (trimmedTitle.length > 18) {
       toast.error(t('create.error_title_limit'))
       setSubmitting(false)
       return
@@ -131,7 +131,7 @@ export const EditAdForm = ({
         placeholder={t('create.placeholder_title')}
         value={title}
         onChange={e => setTitle(e.target.value)}
-        maxLength={22}
+        maxLength={18}
         required
       />
 

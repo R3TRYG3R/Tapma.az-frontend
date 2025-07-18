@@ -2,6 +2,7 @@
 
 import './HomePage.scss'
 import { useTranslation } from 'react-i18next'
+import { AdsFeed } from '@/features/ad/ui/AdsFeed'
 
 const HomePage = () => {
   const { t } = useTranslation()
@@ -10,6 +11,7 @@ const HomePage = () => {
     <div className="home-page">
       <h1>{t('home.title')}</h1>
       <p>{t('home.subtitle')}</p>
+      <AdsFeed />
     </div>
   )
 }

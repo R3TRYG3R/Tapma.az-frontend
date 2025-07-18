@@ -15,12 +15,15 @@
     "too_many_attempts_please_wait_a_few_seconds": "Too many attempts. Please wait a few seconds.[Please don't break my backend :)]",
     "email_already_in_use": "This email is already registered",
     "invalid_password": "Invalid password",
-    "logout": "Logout"
+    "logout": "Logout",
+    "failed_to_fetch": "Check ur connection"
   },
 
   "home": {
     "title": "Welcome to Tapma.az",
-    "subtitle": "Find what you've been looking for"
+    "subtitle": "Find what you've been looking for",
+    "search_placeholder": "Search ads...",
+    "no_more_ads": "No more ads :("
   },
 
   "register": {
